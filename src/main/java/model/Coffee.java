@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @Getter
 @Setter
-@ToString(exclude = { "supplier"})
+@ToString(exclude = { "supplier1"})
 
 @Entity
 @Table(name = "coffees")
@@ -26,9 +26,9 @@ public class Coffee {
     @Column(name = "COF_NAME", length = 32)
     private String cofName;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne
     @JoinColumn(name = "SUPP_ID", nullable = false)
-    private Supplier supplier;
+    private Supplier supplier1;
 
     @Column(name = "PRICE", nullable = false, precision = 10, scale = 2)
     private BigDecimal price;

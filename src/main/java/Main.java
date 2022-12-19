@@ -28,25 +28,25 @@ public class Main {
            });
 
 
-           List<Coffee> listCoffees;
-           listCoffees = cdao.getAll();
-           System.out.println("List of coffees: ");
-           listCoffees.forEach((c) -> {
-               System.out.println(c);
-           });
+//           List<Coffee> listCoffees;
+//           listCoffees = cdao.getAll();
+//           System.out.println("List of coffees: ");
+//           listCoffees.forEach((c) -> {
+//               System.out.println(c);
+//           });
 
            //One to one relationships
-           //Delete: Cascade.REMOVE to coffee.EncriptedCode
-           //Coffee c= cdao.get("French_Roast_Decaf");
-           //System.out.println("Deleting Coffee: "+c);
-           //cdao.delete(c);
+//           //Delete: Cascade.REMOVE to coffee.EncriptedCode
+//           Coffee c= cdao.get("French_Roast");
+//           System.out.println("Deleting Coffee: "+c);
+//           cdao.delete(c);
 
            //Add: Cascade.PERSIST
            //With auto-generated keys, no need to specify ids
 //           Coffee c= listCoffees.get(0);
-//           c.setId(8);
-//           c.getProduct().setId_prod(8);
-//           c.getEncriptedCode().setCode(123);
+//           c.setId(10);
+//           c.getProduct().setId_prod(10);
+//           c.getEncriptedCode().setCode(1111);
 //           cdao.add(c);
 
 
@@ -61,12 +61,12 @@ public class Main {
 //         Supplier newSupp= new Supplier(1,"st. bla bla", "Madrid", "SP");
 //           sdao.add(newSupp);
 //
-//           List<Supplier> listSuppliers;
-//           listSuppliers = sdao.getAll();
-//           System.out.println("List of Suppliers: ");
-//           listSuppliers.forEach((c) -> {
-//               System.out.println(c);
-//           });
+           List<Supplier> listSuppliers;
+           listSuppliers = sdao.getAll();
+           System.out.println("List of Suppliers: ");
+           listSuppliers.forEach((c) -> {
+               System.out.println(c);
+           });
 //
 //           System.out.println("Modifying supplier's address");
 //           newSupp.setStreet("Paseo del prado");

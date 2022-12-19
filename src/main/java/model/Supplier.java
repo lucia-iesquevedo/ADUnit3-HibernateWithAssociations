@@ -76,7 +76,7 @@ public class Supplier {
         this.pcode = pcode;
     }
 
-    @OneToMany(mappedBy = "supplier")
+    @OneToMany(mappedBy = "supplier1")
     public Collection<Coffee> getCoffees() {
         return coffees;
     }
